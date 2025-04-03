@@ -183,7 +183,7 @@ li {
 
 .publication-table th:nth-child(3), 
 .publication-table td:nth-child(3) {
-    width: 25%; /* 著者 */
+    width: 30%; /* 著者 */
 }
 
 .publication-table th:nth-child(4), 
@@ -193,12 +193,12 @@ li {
 
 .publication-table th:nth-child(5), 
 .publication-table td:nth-child(5) {
-    width: 10%; /* 日付 */
+    width: 7.5%; /* 日付 */
 }
 
 .publication-table th:nth-child(6), 
 .publication-table td:nth-child(6) {
-    width: 10%; /* リンク */
+    width: 7.5%; /* リンク */
     text-align: center;
 }
 
