@@ -1,0 +1,136 @@
+/* 全体設定 */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background: #007bff;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトル */
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* ナビゲーション */
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* ホバー時の色 */
+}
+
+/* セクション */
+section {
+    flex: 1; /* 残りのスペースを占める */
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* セクションタイトル */
+h2 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+/* リスト */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* フッター */
+footer {
+    background-color: #f1f1f1; /* 背景色の例 */
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* 自動的にスペースを埋める */
+    font-size: 0.8em;
+    color: #777;
+}
+
+.resume {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.experience, .education {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+.job-title, .school-name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.job-date, .degree, .edu-date {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.job-description, .edu-description {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
