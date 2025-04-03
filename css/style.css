@@ -83,7 +83,9 @@ footer {
     color: #777;
 }
 
-.resume {
+.resume 
+.publication
+.achievement{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -95,7 +97,11 @@ h2 {
     color: #333;
 }
 
-.experience, .education {
+.experience, 
+.education, 
+.publications, 
+.awards,
+.achievements {
     margin-bottom: 30px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -133,4 +139,89 @@ li {
     font-size: 0.9em;
     color: #777;
     margin-top: 5px;
+}
+
+.publication-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    font-family: Arial, sans-serif;
+    table-layout: fixed; /* セルの幅を固定 */
+}
+
+.publication-table th, .publication-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word; /* 長い単語を折り返し */
+    overflow-wrap: break-word;
+}
+
+.publication-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.publication-table .index-col {
+    text-align: center;
+    font-weight: bold;
+    background-color: #eee;
+    width: 5%; /* インデックス列の幅を固定 */
+}
+
+/* 各列の幅を固定 */
+.publication-table th:nth-child(1), 
+.publication-table td:nth-child(1) {
+    width: 5%;  /* インデックス */
+}
+
+.publication-table th:nth-child(2), 
+.publication-table td:nth-child(2) {
+    width: 30%; /* タイトル */
+}
+
+.publication-table th:nth-child(3), 
+.publication-table td:nth-child(3) {
+    width: 25%; /* 著者 */
+}
+
+.publication-table th:nth-child(4), 
+.publication-table td:nth-child(4) {
+    width: 20%; /* 会議 / ジャーナル */
+}
+
+.publication-table th:nth-child(5), 
+.publication-table td:nth-child(5) {
+    width: 10%; /* 日付 */
+}
+
+.publication-table th:nth-child(6), 
+.publication-table td:nth-child(6) {
+    width: 10%; /* リンク */
+    text-align: center;
+}
+
+.award-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    font-family: Arial, sans-serif;
+}
+
+.award-table th:nth-child(1), 
+.award-table td:nth-child(1) {
+    text-align: center;
+    width: 5%;  /* インデックス */
+}
+.award-table th, .award-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.award-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
 }
