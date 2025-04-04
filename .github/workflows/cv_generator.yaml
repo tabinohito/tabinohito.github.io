@@ -32,4 +32,4 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: uv run .\cv_generator.py
+        run: uv run cv_generator.py
