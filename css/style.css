@@ -225,3 +225,17 @@ li {
     font-weight: bold;
     text-align: center;
 }
+
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+}
+.social-icons a {
+    margin: 0 15px;
+    font-size: 30px; /* アイコンのサイズ */
+    color: #333; /* アイコンの色 */
+    text-decoration: none; /* 下線を消す */
+}
+.social-icons a:hover {
+    color: #007bff; /* ホバー時の色 */
+}
