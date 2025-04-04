@@ -10,18 +10,33 @@
 <body>
     <div id="header"></div> <!-- ヘッダーをここに読み込む -->
     <section>
-        <h2>Current Affiliation</h2>
-        <div style="text-align: center;">
-            <img src="images/tako.JPG" alt="Description of image" style="width: 50%; height: auto;"/>
+        <div class="profile-container">
+          <div class="profile-image-wrapper">
+            <img src="images/tako.JPG" alt="Description of image" class="profile-image" />
+          </div>
+          <div class="profile-content">
+            <div class="profile-text">
+              <h2 class="profile-name">Taro Tako</h2>
+              <p class="profile-subtitle">Ph.D. Student at SOKEN University</p>
+            </div>
+          </div>
         </div>
-        <p>I am a Ph.D. student at SOKEN University and obtained my Master's degree in 2024. While pursuing my doctoral studies, I started working as a Research Assistant at the National Institute of Informatics (NII). My research interests focus on tactile sensing and humanoid robot control.
-        </p>
-    </section>    
+        <br>
+        <div class="profile-bio">
+        <h3>Biography</h3>
+            <p>
+            I am a Ph.D. student at SOKEN University and obtained my Master's degree in 2024. While pursuing my doctoral studies, I started working as a Research Assistant at the National Institute of Informatics (NII). My research interests focus on tactile sensing and humanoid robot control.
+            </p>
+        </div>
+    </section>
+      
+      
     <div class="social-icons">
         <a href="https://github.com/tabinohito" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://jp.linkedin.com/in/%E5%A4%AA%E9%83%8E-%E7%94%B0%E5%85%89-78557a281" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <!-- 他のSNSのリンクも追加可能 -->
     </div>
+
     <div id="footer"></div> <!-- フッターをここに読み込む -->
 
     <script src="js/script.js"></script>
