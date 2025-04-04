@@ -41,3 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // 各テーブルの `tbody` を取得
+    document.querySelectorAll(".publication-domestic-table tbody").forEach((tbody) => {
+        let index = 1; // 各テーブルごとにカウントをリセット
+        tbody.querySelectorAll("tr").forEach((row) => {
+            const indexCell = row.querySelector(".index-col");
+            if (indexCell) {
+                indexCell.textContent = index++; // インデックスを設定
+            }
+        });
+    });
+});
+
