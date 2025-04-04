@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 'pyproject.toml'
+          python-version: 'script/cv/pyproject.toml'
 
       - name: Install the project
         run: uv sync --all-extras --dev
