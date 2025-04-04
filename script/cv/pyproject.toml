@@ -1,0 +1,11 @@
+[project]
+name = "cv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bs4>=0.0.2",
+    "fpdf>=1.7.2",
+    "pyyaml>=6.0.2",
+]
