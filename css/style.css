@@ -124,17 +124,17 @@ li {
     margin-bottom: 15px;
 }
 
-.job-title, .school-name {
+.job-title, .school-name, .contest-title {
     font-weight: bold;
     font-size: 1.2em;
 }
 
-.job-date, .degree, .edu-date {
+.job-date, .degree, .edu-date ,.contest-date {
     color: #555;
     font-size: 0.9em;
 }
 
-.job-description, .edu-description {
+.job-description, .edu-description ,.contest-description {
     display: block;
     font-size: 0.9em;
     color: #777;
