@@ -14,7 +14,7 @@ jobs:
     defaults:
       run:
         working-directory: ./script/cv
-        
+
     steps:
       - uses: actions/checkout@v4
 
@@ -32,4 +32,4 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: uv run ..\..\script\cv\cv_generator.py
+        run: uv run .\cv_generator.py
