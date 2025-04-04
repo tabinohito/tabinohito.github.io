@@ -3,9 +3,10 @@ name: cv_generator
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   uv-generator:
@@ -58,7 +59,7 @@ jobs:
           git add .
           git commit -m 'Generated static html files'
           git push -f origin $LOCAL_BRANCH_NAME:$HOSTING_BRANCH_NAME
-          
+
       - name: Teardown when the workflow failed
         if: failure() && steps.build_step.outcome == 'failure'
         run: |
