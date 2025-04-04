@@ -18,9 +18,11 @@ jobs:
         uses: astral-sh/setup-uv@v4
 
       - name: Set up Python
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         uses: actions/setup-python@v4
         with:
-          python-version: 'script/cv/pyproject.toml'
+          python-version: '..\..\script/cv/pyproject.toml'
 
       - name: Install the project
         run: uv sync --all-extras --dev
