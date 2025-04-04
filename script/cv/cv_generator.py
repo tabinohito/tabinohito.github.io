@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from fpdf import FPDF
 import yaml
+import argparse
 
 # PDFクラスの定義
 class PDF(FPDF):
@@ -19,14 +20,53 @@ class PDF(FPDF):
         self.ln(1)  # 行間を詰める
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Generate a PDF resume.')
+    parser.add_argument(
+        '--output-filename',
+        '-o',
+        type=str,
+        help='Name of the file',
+        default='resume.pdf'
+    )
+    parser.add_argument(
+        '--publication-filename',
+        type=str,
+        help='Name of the file',
+        default='../../publication.html'
+    )
+    parser.add_argument(
+        '--combination-resume-filename',
+        type=str,
+        help='Name of the file',
+        default='../../combination_resume.html'
+    )
+    parser.add_argument(
+        '--personal-info-filename',
+        type=str,
+        help='Name of the file',
+        default='personal_info.yaml'
+    )
+
+    args = parser.parse_args()
+
+    # 引数に拡張子がついてるか確認してない場合は追加
+    if not args.output_filename.endswith('.pdf'):
+        args.output_filename += '.pdf'
+    if not args.publication_filename.endswith('.html'):
+        args.publication_filename += '.html'
+    if not args.combination_resume_filename.endswith('.html'):
+        args.combination_resume_filename += '.html'
+    if not args.personal_info_filename.endswith('.yaml'):
+        args.personal_info_filename += '.yaml'
+
     # HTMLファイルを読み込む
-    with open('../../publication.html', 'r', encoding='utf-8') as file:
+    with open(args.publication_filename, 'r', encoding='utf-8') as file:
         soup_pub = BeautifulSoup(file, 'html.parser')
 
-    with open('../../combination_resume.html', 'r', encoding='utf-8') as file:
+    with open(args.combination_resume_filename, 'r', encoding='utf-8') as file:
         soup_resume = BeautifulSoup(file, 'html.parser')
 
-    with open('personal_info.yaml', 'r', encoding='utf-8') as file:
+    with open(args.personal_info_filename, 'r', encoding='utf-8') as file:
         personal_info = yaml.safe_load(file)
 
     # PDF生成
@@ -152,4 +192,4 @@ if __name__ == "__main__":
         # PDFに情報を書き込む
         pdf.chapter_body(f"Title: {title}\nAuthors: {authors}\nConference/Journal: {conference}\nDate: {date}\nLink: {link}\n")
     # PDFを保存
-    pdf.output('resume.pdf')
+    pdf.output(args.output_filename)
