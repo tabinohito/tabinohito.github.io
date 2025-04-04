@@ -83,9 +83,9 @@ footer {
     color: #777;
 }
 
-.resume 
-.publication
-.achievement{
+.resume,
+.publication,
+.achievement {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -97,9 +97,9 @@ h2 {
     color: #333;
 }
 
-.experience, 
-.education, 
-.publications, 
+.experience,
+.education,
+.publications,
 .awards,
 .achievements {
     margin-bottom: 30px;
@@ -115,33 +115,37 @@ h3 {
     padding-bottom: 5px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 li {
     margin-bottom: 15px;
 }
 
-.job-title, .school-name, .contest-title {
+.job-title,
+.school-name,
+.contest-title {
     font-weight: bold;
     font-size: 1.2em;
 }
 
-.job-date, .degree, .edu-date ,.contest-date {
+.job-date,
+.degree,
+.edu-date,
+.contest-date {
     color: #555;
     font-size: 0.9em;
 }
 
-.job-description, .edu-description ,.contest-description {
+.job-description,
+.edu-description,
+.contest-description {
     display: block;
     font-size: 0.9em;
     color: #777;
     margin-top: 5px;
 }
 
-.publication-table {
+.publication-table,
+.award-table,
+.publication-domestic-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1em;
@@ -149,7 +153,12 @@ li {
     table-layout: fixed; /* セルの幅を固定 */
 }
 
-.publication-table th, .publication-table td {
+.publication-table th,
+.publication-table td,
+.award-table th,
+.award-table td,
+.publication-domestic-table th,
+.publication-domestic-table td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: left;
@@ -157,12 +166,15 @@ li {
     overflow-wrap: break-word;
 }
 
-.publication-table th {
+.publication-table th,
+.award-table th,
+.publication-domestic-table th {
     background-color: #f2f2f2;
     font-weight: bold;
     text-align: center;
 }
 
+.publication-domestic-table .index-col,
 .publication-table .index-col {
     text-align: center;
     font-weight: bold;
@@ -171,71 +183,146 @@ li {
 }
 
 /* 各列の幅を固定 */
-.publication-table th:nth-child(1), 
-.publication-table td:nth-child(1) {
-    width: 5%;  /* インデックス */
+.publication-table th:nth-child(1),
+.publication-table td:nth-child(1),
+.award-table th:nth-child(1),
+.award-table td:nth-child(1),
+.publication-domestic-table th:nth-child(1),
+.publication-domestic-table td:nth-child(1) {
+    width: 2.5%; /* インデックス */
 }
 
-.publication-table th:nth-child(2), 
-.publication-table td:nth-child(2) {
+.publication-table th:nth-child(2),
+.publication-table td:nth-child(2),
+.award-table th:nth-child(2),
+.award-table td:nth-child(2),
+.publication-domestic-table th:nth-child(2),
+.publication-domestic-table td:nth-child(2) {
     width: 30%; /* タイトル */
 }
 
-.publication-table th:nth-child(3), 
-.publication-table td:nth-child(3) {
+.publication-table th:nth-child(3),
+.publication-table td:nth-child(3),
+.award-table th:nth-child(3),
+.award-table td:nth-child(3),
+.publication-domestic-table th:nth-child(3),
+.publication-domestic-table td:nth-child(3) {
     width: 30%; /* 著者 */
 }
 
-.publication-table th:nth-child(4), 
-.publication-table td:nth-child(4) {
+.publication-table th:nth-child(4),
+.publication-table td:nth-child(4),
+.award-table th:nth-child(4),
+.award-table td:nth-child(4),
+.publication-domestic-table th:nth-child(4),
+.publication-domestic-table td:nth-child(4) {
     width: 20%; /* 会議 / ジャーナル */
 }
 
-.publication-table th:nth-child(5), 
-.publication-table td:nth-child(5) {
+.publication-table th:nth-child(5),
+.publication-table td:nth-child(5),
+.award-table th:nth-child(5),
+.award-table td:nth-child(5),
+.publication-domestic-table th:nth-child(5),
+.publication-domestic-table td:nth-child(5) {
     width: 7.5%; /* 日付 */
 }
 
-.publication-table th:nth-child(6), 
-.publication-table td:nth-child(6) {
+.publication-table th:nth-child(6),
+.publication-table td:nth-child(6),
+.award-table th:nth-child(6),
+.award-table td:nth-child(6),
+.publication-domestic-table th:nth-child(6),
+.publication-domestic-table td:nth-child(6) {
     width: 7.5%; /* リンク */
     text-align: center;
 }
 
-.award-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1em;
-    font-family: Arial, sans-serif;
-}
-
-.award-table th:nth-child(1), 
-.award-table td:nth-child(1) {
-    text-align: center;
-    width: 5%;  /* インデックス */
-}
-.award-table th, .award-table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-.award-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    text-align: center;
-}
-
+/* ソーシャルアイコン */
 .social-icons {
     text-align: center;
     margin: 20px 0;
 }
+
 .social-icons a {
     margin: 0 15px;
     font-size: 30px; /* アイコンのサイズ */
     color: #333; /* アイコンの色 */
     text-decoration: none; /* 下線を消す */
 }
+
 .social-icons a:hover {
     color: #007bff; /* ホバー時の色 */
+}
+
+body {
+    text-align: left;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center; /* ← 中央揃えのキモ */
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.profile-image-wrapper {
+    width: 50%; /* 写真はページの50%幅 */
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.profile-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ← 名前・肩書きを縦中央に */
+}
+
+.profile-text {
+    text-align: left;
+}
+
+.profile-name {
+    font-size: 2.0em;
+    margin: 0;
+    text-align: left;
+}
+
+.profile-subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.profile-bio {
+    max-width: 900px;
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: flex-start; /* モバイルでは上揃え */
+    }
+
+    .profile-image-wrapper,
+    .profile-content {
+        width: 100%;
+    }
+
+    .profile-bio {
+        padding: 10px;
+    }
 }
